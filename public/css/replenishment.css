@@ -1,0 +1,223 @@
+.alert {
+    border-width: 0px;
+}
+
+.repl-title {
+    text-align: center;
+    font-size: large;
+}
+
+.widget-trans svg{
+    background-color: transparent !important;
+}
+
+.repl_segment {
+    border-color: #AAA;
+}
+
+.text_chart {
+    /*margin-top: 0px;*/
+    /*margin-left: -15px;*/
+}
+
+.sustain-left {
+    padding-left: 5px;
+    padding-right: 1px;
+    padding-bottom: 0px;
+}
+
+.sustain-center {
+    padding: 0px;
+    margin-top: 0px;
+    font-weight: bolder;
+    font-size: 120%;
+    vertical-align: top;
+    text-align: center;
+    color: #363636!important;
+    background: url(../img/mybg80.png);
+}
+
+.sustain-row {
+    padding: 0px;
+    color: #363636!important;
+    background: url(../img/mybg80.png);
+}
+
+.sustain-right {
+    /*margin-top: -15px;*/
+    /*padding-top: 0px;*/
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.ui-sortable {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.hours-header {
+    padding-top: 0px;
+    font-size: small;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-overflow: clip;
+}
+
+.ac-cooling {
+    color: #0000ff;
+}
+.widgets {
+    max-height: 135px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.thermometer {
+    padding-bottom: 8px;
+}
+
+.thermometer-outer-v {
+    height: 78px;
+    width: 15px;
+}
+.thermometer-outer {
+    float: left;
+    background: #c4f0ff;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    box-sizing: content-box;
+}
+.thermometer-inner-v {
+    width: 15px;
+}
+.thermometer-inner {
+    background: #3f83f7;
+}
+
+
+
+.photo-attribution {
+    text-align: right;
+    font-size: 50%;
+}
+
+.photo-attribution a:link,
+.photo-attribution a:visited,
+.photo-attribution a:hover,
+.photo-attribution a:active
+{
+    color: white;
+}
+
+.snickers-box {
+    /* https://secure.flickr.com/photos/mynameisharsha/3060098365 */
+    background-image: url('/images/replenishments/snickers.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.reeses-box {
+    /* https://secure.flickr.com/photos/mynameisharsha/3060098365 */
+    background-image: url('/images/replenishments/reeses.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.almonds-box {
+    /* https://secure.flickr.com/photos/mynameisharsha/3060098365 */
+    background-image: url('/images/replenishments/almonds.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.granola-box {
+    /* https://secure.flickr.com/photos/notahipster/4402860361 */
+    background-image: url('/images/replenishments/granola.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.mints-box {
+    /* https://secure.flickr.com/photos/jeepersmedia/14268627833 */
+    background-image: url('/images/replenishments/mints.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.andes-box {
+    /* https://secure.flickr.com/photos/compujeramey/47025604 */
+    background-image: url('/images/replenishments/andes.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.starburst-box {
+    /* https://secure.flickr.com/photos/compujeramey/47025604 */
+    background-image: url('/images/replenishments/starburst.jpg');
+    background-size: cover;
+    color: white;
+    height: 140px;
+}
+
+.transparent-layer {
+    margin-top: 2px;
+    margin-bottom: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.thermo_lvl {
+
+    font-size: 120%;
+    margin-left: 2px;
+    margin-top: 25px;
+}
+
+.widget-trans {
+    height: 80px;
+}
+
+.widget-center {
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1  {
+        width: 100%;
+        *width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
+}
+

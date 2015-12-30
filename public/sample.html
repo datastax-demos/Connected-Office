@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connected Office Dashboard</title>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- <script src="js/jquery-1.10.2.min.js"></script> -->
+      <script src="/js/bootstrap.js"></script>
+      <script src="/js/sample.js"></script>
+      <script src="/js/tab_manager.js"></script>
+      <script src="/js/button_manager.js"></script>
+      <script type="text/javascript" src="/jchartfx/js/jchartfx.system.js"></script>
+      <script type="text/javascript" src="/jchartfx/js/jchartfx.coreVector.js"></script>
+      <script type="text/javascript" src="/jchartfx/js/jchartfx.animation.js"></script>
+      <script type="text/javascript" src="/jchartfx/js/jchartfx.advanced.js"></script>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="/css/cerulean.bootstrap.min.css">
+
+	<link href="/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/jchartfx/styles/Attributes/jchartfx.attributes.css" />
+    <link rel="stylesheet" type="text/css" href="/jchartfx/styles/Palettes/jchartfx.palette.css" />
+  </head>
+  <body>
+
+  <div id="office_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          </div>
+      </div>
+  </div>
+
+  <div id="kitchen_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          </div>
+      </div>
+  </div>
+
+  <div id="conference_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          </div>
+      </div>
+  </div>
+
+	  <div class="container container-fluid">
+	  	<div class="row" id="dashboard_wrapper">
+		  	<div class="row" id="dashboard_header">
+				<div class = "col-xs-12 panel frame-only">
+					<img src="/images/dse_logo.png" alt="DataStax" style="height: 47px; width: auto;">
+					<span class="title">Connected Office</span>
+				</div>
+
+		<div class="row" id="dashboard_body">
+			<div class="col-xs-12 frame-only">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                    <li><a href="#environment" role="tab" data-toggle="tab">Environment</a></li>
+                    <li><a href="#tracker" role="tab" data-toggle="tab">People</a></li>
+                    <li><a href="#snacks" role="tab" data-toggle="tab">Snacks</a></li>
+                    <li><a href="#global" role="tab" data-toggle="tab">Global</a></li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active row" id="home">
+                        <div class="col-xs-8 frame-only"><span class="sectionHeader">BASIC CONNECTED OFFICE CONCEPTS</span></div>
+                        <div id="button_list_header" class="col-xs-4 frame-only">(touch an item to see more)</div>
+                        <div class="col-xs-8 frame-only">
+
+                            <img src="/images/schematic.png" alt="Office">
+                            <span id="temp1" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="temp2" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="temp3" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="temp4" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="temp5" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="temp6" class="temp glyphicon glyphicon-fire"></span>
+                            <span id="humidity1" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="humidity2" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="humidity3" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="humidity4" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="humidity5" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="humidity6" class="humidity glyphicon glyphicon-tint"></span>
+                            <span id="weight1" class="weight glyphicon glyphicon-chevron-down"></span>
+                            <span id="weight2" class="weight glyphicon glyphicon-chevron-down"></span>
+                            <span id="weight3" class="weight glyphicon glyphicon-chevron-down"></span>
+                            <span id="weight4" class="weight glyphicon glyphicon-chevron-down"></span>
+                            <span id="weight5" class="weight glyphicon glyphicon-chevron-down"></span>
+                            <span id="presence1" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="presence2" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="presence3" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="presence4" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="presence5" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="presence6" class="presence glyphicon glyphicon-signal"></span>
+                            <span id="motion1" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion2" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion3" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion4" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion5" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion6" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion7" class="motion glyphicon glyphicon-user"></span>
+                            <span id="motion8" class="motion glyphicon glyphicon-user"></span>
+                            <span id="light1" class="light glyphicon glyphicon-certificate"></span>
+                            <span id="light2" class="light glyphicon glyphicon-certificate"></span>
+                            <span id="light3" class="light glyphicon glyphicon-certificate"></span>
+                            <span id="light4" class="light glyphicon glyphicon-certificate"></span>
+
+                        </div>
+
+                        <div class="col-xs-2 frame-only"><button id="btnTemp" class="btn btn-primary btn-block">Temperature</button></div>
+                        <div class="col-xs-2 frame-only"><button id="btnHumidity" class="btn btn-primary btn-block">Humidity</button></div>
+                        <div class="col-xs-2 frame-only"><button id="btnWeight" class="btn btn-primary btn-block">Weight</button></div>
+                        <div class="col-xs-2 frame-only"><button id="btnPresence" class="btn btn-primary btn-block">Presence</button></div>
+                        <div class="col-xs-2 frame-only"><button id="btnMotion" class="btn btn-primary btn-block">Motion</button></div>
+                        <div class="col-xs-2 frame-only"><button id="btnLight" class="btn btn-primary btn-block">Light</button></div>
+
+                        <div id="sensing_details" class="col-xs-4 frame-only" src="includes/intro.html"></div>
+
+                    </div>
+                    <div class="tab-pane" id="environment">
+                        <div class="main_chart" id="environment_chart"></div>
+                    </div>
+                    <div class="tab-pane fade" id="tracker">
+                        <div id="tracker_chart">
+                            <img src="/images/schematic.png" alt="Office_layout">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="snacks">
+                        <div id="snack_chart"></div>
+                    </div>
+                    <div class="tab-pane fade" id="global">
+                        <div id="global_chart"></div>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="row" id="dashboard_footer">
+		</div>
+	  </div>
+    </div>
+    </div>
+
+
+
+  </body>
+
+</html>

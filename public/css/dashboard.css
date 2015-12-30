@@ -1,0 +1,519 @@
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.dropnav {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+}
+
+.page-title {
+    margin: 11px 0 10px;
+}
+
+.bg-info {
+    background-color: #6bafbd;
+    color: #fff;
+}
+
+.white-bg {
+    background-color: #FFFFFF;
+}
+
+.bg-info {
+    background-color: #6bafbd;
+    color: #fff;
+}
+
+.bg-danger {
+    background-color: #fc8675!important;
+    color: #fff!important;
+}
+
+.panel-sustain {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.jarviswidget {
+    margin-bottom: 0px;
+}
+
+.chart {
+    margin: 0px 0px 0px 0px;
+    min-height: 250px;
+}
+
+.easy-pie-title {
+    font-size: 9px;
+    margin-left: 3px;
+    margin-right: 2px;
+}
+
+.ui-sortable {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#content {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.panel-stat3 {
+    position: relative;
+    overflow: hidden;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.sectionHeader {
+    font-weight: bold;
+    font-size: 120%;
+    padding-left: 25px;
+}
+
+#button_list_header {
+    text-align: center;
+}
+.info {
+    color: dodgerblue;
+    font-size: 125%;
+    text-align: right;
+}
+
+.info_header {
+    text-align: right;
+    float: right;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 180%;
+    padding-left: 30px;
+    vertical-align: bottom;
+}
+
+#sensing_details {
+    height: 400px;
+}
+
+#office_modal .modal-lg {
+    width: 650px;
+}
+
+#kitchen_modal .modal-lg {
+    width: 650px;
+}
+
+#conference_modal .modal-lg {
+    width: 650px;
+}
+
+.office_layout {
+    border-style: dotted, dotted, dotted, dotted;
+    border: 1px;
+    width: 30%;
+    height: 30%;
+}
+
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+h4 {
+    margin-top: 25px;
+}
+.row .row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+[class*="col-"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.col-bordered {
+  border: 1px solid #ddd;
+}
+.frame-only {
+	border: none; !important;
+    box-shadow: none; !important;
+    height: 100%;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.nav_font {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.sub_nav_font {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.maprow{
+    margin-left: 1px;
+}
+
+.ticker {
+    list-style-type: none;
+    font-size: 75%;
+    width: 300;
+    height: 120;
+    overflow: hidden;
+}
+
+#tickerlabel {
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.main_chart {
+width: 780px;
+height: 400px;
+}
+
+.sustain_chart {
+    width: 780px;
+    height: 350px;
+}
+
+.image_holder {
+    height: 100%;
+}
+
+.image_holder div {
+    padding: 2px;
+}
+
+.sub_chart {
+    height: 140px;
+    /*width: 275px;*/
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+.repl_segment {
+    border-color: darkblue;
+    border: 1px solid;
+    border-radius: 8px;
+    padding-left: 1px;
+    padding-right: 1px;
+    background-color: #FFFFFF;
+    min-width: 600px;
+
+}
+
+.gauge {
+    /*width: 110px;*/
+    height: 140px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.text_chart {
+    margin: 1px 1px 1px 1px;
+    /*width: 110px;*/
+    font-size: 135%;
+    font-weight: bolder;
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+.text_chart h3{
+    text-align: center;
+    font-size: 250%;
+    font-weight: bolder;
+    margin-top: 0px;
+}
+
+.text_chart h4{
+
+    text-align: center;
+    font-size: 80%;
+
+}
+
+.alert {
+    color: red;
+}
+
+.gauge_label {
+    font-size: 80%;
+
+}
+
+.full_chart {
+    width: 1200px;
+    height: 440px;
+}
+.full_map {
+    width: 100%;
+    height: 400px;
+    margin-left: 5px;
+}
+.chartTitle {
+    padding-left: 25px;
+    padding-top:  10px;
+    padding-bottom: 10px;
+    font-size: 87%;
+    font-weight: bold;
+}
+
+.img_cont {
+	position: relative;
+	background: transparent url(../images/schematic2.png) no-repeat center bottom;
+	background-size: 550px;
+}
+
+.office_img{
+	width: 550px;
+	z-index: -1;
+}
+
+.gauges .table{
+	float: right;
+}
+
+.room_occupancy_label {
+
+    display: block;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-size: 80%;
+}
+
+.room_occupancy_label_hover {
+
+    display: block;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 80%;
+}
+
+.emptyRoom{
+    background-color: darkgreen;
+}
+.quarterRoom{
+    background-color: lightyellow;
+}
+.halfRoom{
+    background-color: orange;
+}
+.threeQtrRoom{
+    background-color: darkorange;
+}
+.fulLRoom{
+    background-color: red;
+}
+
+.office_label {
+    font-size: 180%;
+    font-weight: bold;
+}
+
+.temp {
+    color: red;
+    font-size: 165%;
+    opacity: 0;
+}
+
+.location1 {
+    position: absolute;
+    left: 	20%;
+    top: 30%;
+}
+
+.location2 {
+    position: absolute;
+    left: 	28%;
+    top:	30%;
+}
+
+.location3 {
+    position: absolute;
+    left: 	45%;
+    top:	30%;
+}
+
+.location4 {
+    position: absolute;
+    left: 	17%;
+    top:	88%;
+}
+
+.location5 {
+    position: absolute;
+    left: 	5.5%;
+    top:	64%;
+}
+
+.location6 {
+    position: absolute;
+    left: 	58%;
+    top:	86%;
+}
+
+.humidity {
+    color: blue;
+    font-size: 165%;
+    opacity: 0;
+}
+
+.presence {
+    color: lime;
+    font-size: 165%;
+    opacity: 0;
+}
+
+.weight {
+    color: dodgerblue;
+    font-size: 165%;
+    opacity: 0;
+}
+
+#weight1 {
+    position: absolute;
+    left: 	21%;
+    top:	57%;
+}
+
+#weight2 {
+    position: absolute;
+    left: 	19%;
+    top:	57%;
+}
+
+#weight3 {
+    position: absolute;
+    left: 	17%;
+    top:	57%;
+}
+
+#weight4 {
+    position: absolute;
+    left: 	21%;
+    top:	53%;
+}
+#weight5 {
+    position: absolute;
+    left: 	17%;
+    top:	53%;
+}
+
+.motion {
+    color: darkorange;
+    font-size: 165%;
+    opacity: 0;
+}
+
+.light {
+    color: #ffff00;
+    font-size: 165%;
+    opacity: 0;
+}
+
+#boardroom {
+	position: absolute;
+	left: 	375px;
+	top:	270px;
+}
+#cassandra {
+	position: absolute;
+	left: 	485px;
+	top:	225px;
+}
+#flightdeck {
+	position: absolute;
+	left: 	30px;
+	top:	215px;
+}
+#grizzly {
+	position: absolute;
+	left: 	180px;
+	top:	115px;
+}
+#vortex {
+	position: absolute;
+	left: 	265px;
+	top:	115px;
+}
+#yeager {
+	position: absolute;
+	left: 	325px;
+	top:	115px;
+}
+.autoModal.modal .modal-body{
+    width:'auto';
+    height:'auto';
+    max-height: 100%;
+}
+
+.row {
+    margin-right: 0px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.bold-text {
+    font-weight: bold;
+}

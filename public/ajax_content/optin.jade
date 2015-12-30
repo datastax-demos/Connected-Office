@@ -1,0 +1,55 @@
+doctype html
+html.
+<link rel="stylesheet" href="/css/optin.css" media="screen" type="text/css" />
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="login">
+    <div id="triangle"></div>
+    <h1>Opt in</h1>
+    <form>
+        <input type="user_email" name = "user_email" placeholder="Email" />
+        <input type="user_name" name = "user_name" placeholder= "Your name" />
+        <input type="user_skills" name = "user_skills" placeholder="Skills" />
+        <input type="user_bio" name = "user_bio" placeholder = "Biography" />
+        <input type= "user_other" name = "user_other" placeholder = "Other Information" />
+    </form>
+</div>
+<div id="whitelist">
+    <h1>Register</h1>
+    <form>
+        <input type = "device_id" name = "device_id" placeholder = "Device ID" />
+        <input type = "device_description" name = "device_description" placeholder = "Describe your Device" />
+        <input type = "device_name" name = "device_name" placeholder = "Type of Device" />
+        <input type = "submit" value = "Submit" />
+    </form>
+</div>
+<script>
+$(document).on('click','input[type=submit]',function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'post',
+        url:"http://208.96.49.199:3000/api/userinfo",
+        data:$('form:eq(0)').serialize(),
+        success:function(resp){
+            alert('Sent to Userinfo');
+        },
+        fail:function(resp){
+            alert('Couldn\'t send to user info');
+        }
+    });
+    $.ajax({
+        type:'post',
+        url:"http://208.96.49.199:3000/api/whitelist",
+        data:$('form:eq(1)').serialize(),
+        success:function(resp){
+            alert('Sent to whitelist');
+        },
+        fail:function(resp){
+            alert('couldn\'t send the second table');
+        }
+    });
+});
+</script>
+</body>

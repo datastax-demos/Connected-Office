@@ -1,0 +1,50 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Internet of Things!</title>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+
+
+</head>
+<body>
+<div id="chart1" ></div>
+</body>
+</html>
+
+<script language="JavaScript">
+$(document).ready(function($) {
+    var dataArray = [];
+    dataArray[0] = ['Lat', 'Long', 'Name']
+
+    var data2 = [
+        ['Lat', 'Long', 'Name'],
+        [37.4232, -122.0853, 'Work'],
+        [37.4289, -122.1697, 'University'],
+        [37.6153, -122.3900, 'Airport'],
+        [37.4422, -122.1731, 'Shopping']
+    ];
+
+    $.getJSON('/api/user_last', function (data) {
+        $.each(data, function (index, element) {
+            var i = index + 1;
+            if (!dataArray[i]) dataArray[i] = new Array(3);
+
+            dataArray[i] = [element.latitude, element.longitude, element.user];
+            alert(dataArray[i][0])
+        });
+        $("#chart1").append(dataArray[1][0] + "<br/>");
+        $("#chart1").append(data2[1][0]);
+
+    });
+
+
+});
+
+
+</script>

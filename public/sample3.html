@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connected Office Dashboard</title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- <script src="js/jquery-1.10.2.min.js"></script> -->
+
+    <script type="text/javascript" src="highmaps/js/highcharts.js"></script>
+    <script type="text/javascript" src="highmaps/js/themes/gray.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/button_manager.js"></script>
+    <script type="text/javascript" src="js/sample4.js"></script>
+    <script type="text/javascript" src="js/jquery.newsTicker.min.js"></script>
+
+         <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container container-fluid">
+    <div class="row" id="dashboard_wrapper">
+        <div class="row" id="dashboard_header">
+            <div class = "col-xs-8 panel frame-only">
+                <img src="/images/dse_logo.png" alt="DataStax" style="height: 47px; width: auto;">
+                <span class="title">Connected Office</span>
+
+            </div>
+            <div class="col-xs-4 frame-only ticker">
+                    <div id="tickerlabel">Real Time Feed</div>
+                    <div id="ticker1"></div>
+                    <div id="ticker2"></div>
+                    <div id="ticker3"></div>
+            </div>
+
+            <div class="row" id="dashboard_body">
+                <div class="col-xs-12 frame-only">
+                    <ul class="nav nav-tabs nav-justified" role="tablist" id="mainTabs">
+                        <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                        <li><a id="envtab" href="#environment" role="tab">Sustainability</a></li>
+                        <li><a href="#tracker" role="tab" data-toggle="tab">Asset Tracking</a></li>
+                        <li><a href="#snacks" role="tab">Replenishment</a></li>
+                        <li><a id="globaltab" href="#global" role="tab">Global</a></li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active row" id="home">
+                            <div class="col-xs-8 frame-only"><span class="sectionHeader">BASIC CONNECTED OFFICE CONCEPTS</span></div>
+                            <div id="button_list_header" class="col-xs-4 frame-only">(touch an item to see more)</div>
+                            <div class="col-xs-8 frame-only">
+
+                                <img src="/images/schematic.png" alt="Office">
+                                <span id="temp1" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="temp2" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="temp3" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="temp4" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="temp5" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="temp6" class="temp glyphicon glyphicon-fire"></span>
+                                <span id="humidity1" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="humidity2" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="humidity3" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="humidity4" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="humidity5" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="humidity6" class="humidity glyphicon glyphicon-tint"></span>
+                                <span id="weight1" class="weight glyphicon glyphicon-chevron-down"></span>
+                                <span id="weight2" class="weight glyphicon glyphicon-chevron-down"></span>
+                                <span id="weight3" class="weight glyphicon glyphicon-chevron-down"></span>
+                                <span id="weight4" class="weight glyphicon glyphicon-chevron-down"></span>
+                                <span id="weight5" class="weight glyphicon glyphicon-chevron-down"></span>
+                                <span id="presence1" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="presence2" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="presence3" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="presence4" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="presence5" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="presence6" class="presence glyphicon glyphicon-signal"></span>
+                                <span id="motion1" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion2" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion3" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion4" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion5" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion6" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion7" class="motion glyphicon glyphicon-user"></span>
+                                <span id="motion8" class="motion glyphicon glyphicon-user"></span>
+                                <span id="light1" class="light glyphicon glyphicon-certificate"></span>
+                                <span id="light2" class="light glyphicon glyphicon-certificate"></span>
+                                <span id="light3" class="light glyphicon glyphicon-certificate"></span>
+                                <span id="light4" class="light glyphicon glyphicon-certificate"></span>
+
+                            </div>
+
+                            <div class="col-xs-2 frame-only"><button id="btnTemp" class="btn btn-primary btn-block">Temperature</button></div>
+                            <div class="col-xs-2 frame-only"><button id="btnHumidity" class="btn btn-primary btn-block">Humidity</button></div>
+                            <div class="col-xs-2 frame-only"><button id="btnWeight" class="btn btn-primary btn-block">Weight</button></div>
+                            <div class="col-xs-2 frame-only"><button id="btnPresence" class="btn btn-primary btn-block">Presence</button></div>
+                            <div class="col-xs-2 frame-only"><button id="btnMotion" class="btn btn-primary btn-block">Motion</button></div>
+                            <div class="col-xs-2 frame-only"><button id="btnLight" class="btn btn-primary btn-block">Light</button></div>
+
+                            <div id="sensing_details" class="col-xs-4 frame-only" src="includes/intro.html"></div>
+
+                        </div>
+                        <div class="tab-pane fade row" id="environment">
+                                <div class="frame-only col-xs-8" id="environment_charts">
+
+                                    <div class="sub_chart frame-only col-xs-8" id="temp_chart"></div>
+                                    <div class="sub_chart frame-only col-xs-8" id="humidity_chart"></div>
+                                    <div class="sub_chart frame-only col-xs-8" id="pressure_chart"></div>
+                                    <div class="sub_chart frame-only col-xs-8" id="lumens_chart"></div>
+                                    <div class="sub_chart frame-only col-xs-8" id="motion_chart"></div>
+                                </div>
+
+                                <div class="frame-only col-xs-4" id="env_details"></div>
+                        </div>
+                        <div class="tab-pane fade row" id="tracker">
+                            <div class="frame-only  col-xs-8" id="tracker_chart">
+                                <img src="/images/schematic.png" alt="Office_layout">
+                            </div>
+                            <div class="frame-only col-xs-4" id="tracker_details"></div>
+                        </div>
+                        <div class="tab-pane fade row" id="snacks">
+                            <div class="frame-only col-xs-8" id="snack_charts">
+
+                                <div class="sub_chart frame-only col-xs-8" id="almond_chart"></div>
+                                <div class="sub_chart frame-only col-xs-8" id="granolaBar_chart"></div>
+                                <div class="sub_chart frame-only col-xs-8" id="chip_chart"></div>
+                                <div class="sub_chart frame-only col-xs-8" id="cookie_chart"></div>
+                            </div>
+                            <div class="frame-only col-xs-4" id="snack_details"></div>
+                        </div>
+                        <div class="tab-pane fade row" id="global">
+                            <div class="main_chart frame-only col-xs-7" id="global_map"></div>
+                            <div class="frame-only col-xs-4" id="global_details"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="dashboard_footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

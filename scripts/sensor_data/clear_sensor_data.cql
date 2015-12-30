@@ -1,0 +1,11 @@
+TRUNCATE coffice.sensor_48h;
+TRUNCATE coffice.sensor_48h_backup;
+TRUNCATE coffice.sensor_by_identity_date;
+TRUNCATE coffice.sensor_count_5sec;
+TRUNCATE coffice.sensor_date;
+TRUNCATE coffice.sensor_hour_avg;
+TRUNCATE coffice.sensor_last;
+TRUNCATE coffice.sensor_meta;
+TRUNCATE coffice.sensor_qtr_hour_avg;
+TRUNCATE coffice.sensor_rollup;
+TRUNCATE coffice.sensor_type_hour_avg;

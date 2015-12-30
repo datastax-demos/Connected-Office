@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" media="screen" href="css/proximity_sensor.css">
+<div class="frame-only" id="tracker">
+    <div class = "frame-only col-xs-12 info_header" id="tracker_info_header">
+        <button id="tracker_info_btn" class="btn btn-link" data-toggle="modal" data-target="#office_modal">
+            <span id="tracker_info" class="info glyphicon glyphicon-info-sign"></span>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-3 col-xs-6 col-md-offset-2 col-md-6">
+            <div id="circles"></div>
+            <div id="legend"></div>
+            <div id="legend-text">
+                <div class="col-xs-6 align-left">Low Device Count</div>
+                <div class="col-xs-6 align-right">High Device Count</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3"><div id="count"><h1>Device Count</h1><h2></h2></div></div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/proximity_sensor.js"></script>
