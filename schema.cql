@@ -18,7 +18,8 @@ CREATE TABLE consumption_1day (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -40,7 +41,8 @@ CREATE TABLE consumption_7day (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -63,7 +65,8 @@ CREATE TABLE device_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -84,7 +87,8 @@ CREATE TABLE device_last (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -104,7 +108,8 @@ CREATE TABLE devices_60s (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -124,7 +129,8 @@ CREATE TABLE devices_cache (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -146,7 +152,8 @@ CREATE TABLE event_count_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -168,7 +175,8 @@ CREATE TABLE identity_by_sensor_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -189,7 +197,8 @@ CREATE TABLE message_count_hour (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -212,7 +221,8 @@ CREATE TABLE net_device_count (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -235,7 +245,8 @@ CREATE TABLE netmon_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -254,7 +265,8 @@ CREATE TABLE netmon_down (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -275,7 +287,8 @@ CREATE TABLE netmon_last (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -296,7 +309,8 @@ CREATE TABLE sensor_48h (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -317,7 +331,8 @@ CREATE TABLE sensor_48h_backup (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -339,7 +354,8 @@ CREATE TABLE sensor_by_identity_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -360,7 +376,8 @@ CREATE TABLE sensor_count_5sec (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -382,7 +399,8 @@ CREATE TABLE sensor_date (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -404,7 +422,8 @@ CREATE TABLE sensor_hour_avg (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -426,7 +445,8 @@ CREATE TABLE sensor_last (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -448,7 +468,8 @@ CREATE TABLE sensor_meta (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -470,7 +491,8 @@ CREATE TABLE sensor_qtr_hour_avg (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -500,7 +522,8 @@ CREATE TABLE sensor_rollup (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -523,7 +546,8 @@ CREATE TABLE sensor_type_hour_avg (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -544,7 +568,8 @@ CREATE TABLE sms_15m (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -565,7 +590,8 @@ CREATE TABLE sms_1m (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -586,7 +612,8 @@ CREATE TABLE sms_5m (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -607,7 +634,8 @@ CREATE TABLE sms_60m (
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.100000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -639,7 +667,8 @@ CREATE TABLE user_hist (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -671,7 +700,8 @@ CREATE TABLE user_last (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -694,7 +724,8 @@ CREATE TABLE user_loc_hist (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -722,7 +753,8 @@ CREATE TABLE userinfo (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
@@ -759,7 +791,8 @@ CREATE TABLE whitelist (
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
-  index_interval=128 AND
+  min_index_interval=128 AND
+  max_index_interval=128 AND
   read_repair_chance=0.000000 AND
   replicate_on_write='true' AND
   populate_io_cache_on_flush='false' AND
