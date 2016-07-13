@@ -14,15 +14,12 @@ CREATE TABLE consumption_1day (
   PRIMARY KEY ((sensor_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -37,15 +34,12 @@ CREATE TABLE consumption_7day (
   PRIMARY KEY ((sensor_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -61,15 +55,12 @@ CREATE TABLE device_date (
   PRIMARY KEY ((device_id, rssi_date), rssi_ts, sensor_id)
 ) WITH CLUSTERING ORDER BY (rssi_ts DESC, sensor_id ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -83,15 +74,12 @@ CREATE TABLE device_last (
   PRIMARY KEY ((device_id), sensor_id)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=15 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -104,15 +92,12 @@ CREATE TABLE devices_60s (
   PRIMARY KEY ((device_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=120 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -125,15 +110,12 @@ CREATE TABLE devices_cache (
   PRIMARY KEY ((device_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=900 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -148,15 +130,12 @@ CREATE TABLE event_count_date (
   PRIMARY KEY ((sensor_type, event_date), event_ts)
 ) WITH CLUSTERING ORDER BY (event_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -171,15 +150,12 @@ CREATE TABLE identity_by_sensor_date (
   PRIMARY KEY ((sensor_id, value_date), value_ts, identity)
 ) WITH CLUSTERING ORDER BY (value_ts DESC, identity ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -193,15 +169,12 @@ CREATE TABLE message_count_hour (
   PRIMARY KEY ((event_date), event_hour)
 ) WITH CLUSTERING ORDER BY (event_hour DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -217,15 +190,12 @@ CREATE TABLE net_device_count (
   PRIMARY KEY ((sensor_id, datekey), timeslot, range)
 ) WITH CLUSTERING ORDER BY (timeslot DESC, range ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -241,15 +211,12 @@ CREATE TABLE netmon_date (
   PRIMARY KEY ((sensor_id, rssi_date), rssi_ts, device_id)
 ) WITH CLUSTERING ORDER BY (rssi_ts DESC, device_id ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -261,15 +228,12 @@ CREATE TABLE netmon_down (
   PRIMARY KEY ((phone))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -283,15 +247,12 @@ CREATE TABLE netmon_last (
   PRIMARY KEY ((sensor_id), device_id)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=15 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -305,15 +266,12 @@ CREATE TABLE sensor_48h (
   PRIMARY KEY ((sensor_id), value_ts)
 ) WITH CLUSTERING ORDER BY (value_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=172800 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -327,15 +285,12 @@ CREATE TABLE sensor_48h_backup (
   PRIMARY KEY ((sensor_id), value_ts)
 ) WITH CLUSTERING ORDER BY (value_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -350,15 +305,12 @@ CREATE TABLE sensor_by_identity_date (
   PRIMARY KEY ((identity, value_date), value_ts, sensor_id)
 ) WITH CLUSTERING ORDER BY (value_ts DESC, sensor_id ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -372,15 +324,12 @@ CREATE TABLE sensor_count_5sec (
   PRIMARY KEY ((report_date), report_ts)
 ) WITH CLUSTERING ORDER BY (report_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -395,15 +344,12 @@ CREATE TABLE sensor_date (
   PRIMARY KEY ((sensor_id, value_date), value_ts)
 ) WITH CLUSTERING ORDER BY (value_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -418,15 +364,12 @@ CREATE TABLE sensor_hour_avg (
   PRIMARY KEY ((sensor_id), event_date_hour)
 ) WITH CLUSTERING ORDER BY (event_date_hour DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -441,15 +384,12 @@ CREATE TABLE sensor_last (
   PRIMARY KEY ((sensor_type), sensor_id)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='NONE' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -464,15 +404,12 @@ CREATE TABLE sensor_meta (
   PRIMARY KEY ((sensor_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -487,15 +424,12 @@ CREATE TABLE sensor_qtr_hour_avg (
   PRIMARY KEY ((sensor_id), event_date_qtr_hour)
 ) WITH CLUSTERING ORDER BY (event_date_qtr_hour DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -518,15 +452,12 @@ CREATE TABLE sensor_rollup (
   PRIMARY KEY ((sensor_id, rollup_type), rollup_ts)
 ) WITH CLUSTERING ORDER BY (rollup_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -542,15 +473,12 @@ CREATE TABLE sensor_type_hour_avg (
   PRIMARY KEY ((sensor_type), event_date_hour, sensor_id)
 ) WITH CLUSTERING ORDER BY (event_date_hour DESC, sensor_id ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -564,15 +492,12 @@ CREATE TABLE sms_15m (
   PRIMARY KEY ((user_phone), message_type)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=900 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -586,15 +511,12 @@ CREATE TABLE sms_1m (
   PRIMARY KEY ((user_phone), message_type)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=60 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -608,15 +530,12 @@ CREATE TABLE sms_5m (
   PRIMARY KEY ((user_phone), message_type)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=300 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -630,15 +549,12 @@ CREATE TABLE sms_60m (
   PRIMARY KEY ((user_phone), message_type)
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.000000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.100000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=3600 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -663,15 +579,12 @@ CREATE TABLE user_hist (
   PRIMARY KEY ((user_id), user_ts, ip_address)
 ) WITH CLUSTERING ORDER BY (user_ts DESC, ip_address ASC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=2592000 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -696,15 +609,12 @@ CREATE TABLE user_last (
   PRIMARY KEY ((user_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -720,15 +630,12 @@ CREATE TABLE user_loc_hist (
   PRIMARY KEY ((user_id), user_ts)
 ) WITH CLUSTERING ORDER BY (user_ts DESC) AND
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -749,15 +656,12 @@ CREATE TABLE userinfo (
   PRIMARY KEY ((user_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
@@ -787,15 +691,12 @@ CREATE TABLE whitelist (
   PRIMARY KEY ((device_id))
 ) WITH
   bloom_filter_fp_chance=0.010000 AND
-  caching='KEYS_ONLY' AND
   comment='' AND
   dclocal_read_repair_chance=0.100000 AND
   gc_grace_seconds=864000 AND
   min_index_interval=128 AND
   max_index_interval=128 AND
   read_repair_chance=0.000000 AND
-  replicate_on_write='true' AND
-  populate_io_cache_on_flush='false' AND
   default_time_to_live=0 AND
   speculative_retry='99.0PERCENTILE' AND
   memtable_flush_period_in_ms=0 AND
